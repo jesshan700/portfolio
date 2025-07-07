@@ -1,0 +1,239 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation */
+.navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-link {
+  margin-right: auto;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-sub {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  display: none;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* Hidden Navigation */
+#hiddenNavBar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  padding: 2rem;
+  z-index: 1001;
+  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-hid {
+  display: block;
+  margin: 1rem 0;
+  text-decoration: none;
+  color: black;
+}
+
+.x-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* Main Description */
+.main-description {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.description-buttons {
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+}
+
+.main-projects {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.main-projects:hover {
+  transform: translateY(-5px);
+}
+
+.image-link {
+  flex: 0 0 200px;
+  margin-right: 2rem;
+}
+
+.image-link img {
+  width: 100%;
+  height: auto;
+}
+
+.project-descript {
+  flex: 1;
+}
+
+.project-date {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.footer-icons {
+  margin-top: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Back to Top Button */
+.to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.to-top:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-sub {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .main-projects {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-link {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}

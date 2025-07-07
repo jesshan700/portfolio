@@ -41,6 +41,10 @@
 }
 
 /* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -58,72 +62,93 @@ body {
   background-color: white;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .header-link {
-  margin-right: auto;
   font-size: 1.5rem;
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .nav-sub {
-  margin: 0 1rem;
+  font-size: 0.9rem;
   text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav-sub:hover {
   color: black;
 }
 
-.icon {
-  display: none;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-}
 
-/* Hidden Navigation */
-#hiddenNavBar {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: white;
-  padding: 2rem;
-  z-index: 1001;
-  box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
-}
-
-.nav-hid {
-  display: block;
-  margin: 1rem 0;
-  text-decoration: none;
-  color: black;
-}
-
-.x-icon {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-}
 
 /* Main Description */
 .main-description {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 2rem;
+  background: white;
+  color: black;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 4rem;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.hero-text p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  flex: 0 0 300px;
   text-align: center;
-  padding: 0 1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .description-buttons {
@@ -132,17 +157,33 @@ body {
 
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   margin: 0 0.5rem;
   text-decoration: none;
   color: black;
-  border: 1px solid black;
-  border-radius: 4px;
+  border: 2px solid black;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* Sections */
 .section {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section:nth-child(even) {
+  background-color: #f8f9fa;
 }
 
 .main-projects {
@@ -202,8 +243,8 @@ body {
   right: 2rem;
   width: 40px;
   height: 40px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -211,6 +252,15 @@ body {
   text-decoration: none;
   opacity: 0.8;
   transition: opacity 0.2s;
+  line-height: 1;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.to-top svg {
+  transform: translateY(10px);
 }
 
 .to-top:hover {
@@ -219,12 +269,39 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .nav-left {
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
   .nav-sub {
-    display: none;
+    font-size: 0.8rem;
   }
 
-  .icon {
-    display: block;
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    flex: 0 0 250px;
+  }
+
+  .hero-image img {
+    max-width: 250px;
   }
 
   .main-projects {

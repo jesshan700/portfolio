@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import jessicaImage from './components/images/jessica.jpeg';
 import './App.css';
 
 function App() {
@@ -55,7 +56,7 @@ function App() {
             </div>
           </div>
           <div className="hero-image">
-            <img src="/Images/jessica.JPG" alt="jessica-picture" />
+            <img src={jessicaImage} alt="jessica-picture" />
           </div>
         </div>
       </div>

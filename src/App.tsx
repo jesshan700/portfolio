@@ -32,9 +32,9 @@ function App() {
         <div className="left-section">
           <div className="profile-content">
             <div className="profile-text">
-              <h1>Hi, I'm Jessica</h1>
+              <h1>Jessica Han</h1>
               <p>
-                I was previously <i>@Amazon</i> and currently open to entry level
+                Previously <i>@Amazon</i> and currently open to entry level
                 positions!
               </p>
               <div className="table-of-contents">
@@ -69,34 +69,37 @@ function App() {
         <div className="right-section">
           {/* Introduction */}
           <div id="intro" className="intro-section">
-            <div className="section-header">/ INTRODUCTION ------------</div>
-            <p>
-            I’m Jessica, a recent graduate from Cornell University with a degree 
-            in Information Science, Systems, and Technology and a concentration in 
-            Interactive Technologies. I’m passionate about building software that’s 
-            both thoughtful in design and strong in performance — whether that’s through
-              <strong> user-focused web interfaces</strong>, backend systems, databases, or AI applications.
-            <br /><br />
-            I’ve gained experience across various environments, from big tech at <strong>Amazon</strong> to 
-            fintech at <strong>SWIFT</strong>, and I enjoy working on products that require both creativity 
-            and technical rigor.
-            <br /><br />
-            Outside of work, I love painting with watercolor, playing volleyball, and trying 
-            out new recipes. I'm currently seeking a <strong>full-time software engineering</strong> role where I 
-            can keep learning, contribute to impactful products, and grow across the full stack
-             - from backend to frontend to AI.
-            </p>
+            <div className="section-header"><span>/ INTRODUCTION</span><div className="section-header-line"></div></div>
+            <div className="intro-content">
+              <img src={jessicaImage} alt="Jessica Han" className="intro-profile-image" />
+              <p>
+              I’m Jessica, a recent graduate from Cornell University with a degree 
+              in Information Science, Systems, and Technology and a concentration in 
+              Interactive Technologies. I’m passionate about building software that’s 
+              both thoughtful in design and strong in performance - whether that’s through
+                <strong> user-focused web interfaces</strong>, backend systems, databases, or AI applications.
+              <br /><br />
+              I’ve gained experience across various environments, from big tech at <strong>Amazon</strong> to 
+              devOps at <strong>SWIFT</strong>, and I enjoy working on products that require both creativity 
+              and technical rigor.
+              <br /><br />
+              Outside of work, I love painting with watercolor, playing volleyball, and trying 
+              out new recipes. I'm currently seeking a <strong>full-time software engineering</strong> role where I 
+              can keep learning, contribute to impactful products, and grow across the full stack
+               - from backend to frontend to AI.
+              </p>
+            </div>
           </div>
 
           {/* Experience Section */}
           <div id="experience" className="content-section">
-            <div className="section-header">/ EXPERIENCE ----------</div>
+            <div className="section-header"><span>/ EXPERIENCE</span><div className="section-header-line"></div></div>
             <Experience />
           </div>
 
           {/* Projects Section */}
           <div id="projects" className="content-section">
-            <div className="section-header">/ PROJECTS ----------</div>
+            <div className="section-header"><span>/ PROJECTS</span><div className="section-header-line"></div></div>
             <Projects />
           </div>
 

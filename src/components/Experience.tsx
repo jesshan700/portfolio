@@ -16,7 +16,7 @@ const experiences: ExperienceItem[] = [
     period: 'MAY 2024 - AUG 2024',
     description: 'Subscribe & Save Customer Experience Team; Redesigned system architecture for Subscribe and Save Webpage, enabling dynamic widget placement to improve customer experience.',
     link: 'https://www.amazon.com/fmc/everyday-essentials-sns',
-    highlights: ['AWS','Java','DynamoDB', 'Internal query tools', 'Internal data analysis']
+    highlights: ['SQL','Java','AWS','DynamoDB',  'Internal data analysis']
   },
   {
     company: 'Cornell Digital Tech & Innovation Project Team',
@@ -56,27 +56,35 @@ const Experience: React.FC = () => {
   return (
     <div id="experience" className="section">
       {experiences.map((exp, index) => (
-        <div key={index} className="experience-item">
-          <div className="experience-date">{exp.period}</div>
-          <div className="experience-content">
-            <div className="experience-header">
-              <span className="company-name">{exp.company}</span>
-              <span className="role-title"><i>{exp.role}</i></span>
-            </div>
-            <p className="experience-description">
-              {exp.description}
-            </p>
-            {exp.highlights.length > 0 && (
-              <div className="highlights-container">
-                {exp.highlights.map((highlight, i) => (
-                  <span key={i} className="highlight-button">
-                    {highlight}
-                  </span>
-                ))}
+        <a 
+          key={index} 
+          href={exp.link} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="experience-link"
+        >
+          <div className="experience-item">
+            <div className="experience-date">{exp.period}</div>
+            <div className="experience-content">
+              <div className="experience-header">
+                <span className="company-name">{exp.company}</span>
+                <span className="role-title"><i>{exp.role}</i></span>
               </div>
-            )}
+              <p className="experience-description">
+                {exp.description}
+              </p>
+              {exp.highlights.length > 0 && (
+                <div className="highlights-container">
+                  {exp.highlights.map((highlight, i) => (
+                    <span key={i} className="highlight-button">
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );

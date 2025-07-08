@@ -114,6 +114,7 @@ body {
 
 .table-of-contents {
   margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 
 .table-of-contents ul {
@@ -139,12 +140,11 @@ body {
   color: #F5F5F5;
 }
 
-
-
 .social-links {
-  text-align: center;
+  text-align: left;
   margin-top: auto;
-  padding-bottom: 4rem;
+  margin-left: 5rem;
+  padding-bottom: 10rem;
 }
 
 .social-links a {
@@ -181,12 +181,16 @@ body {
 
 .intro-section p {
   line-height: 1.6;
-  color: #E8E6E3;
+  color: #E0E0E0;
 }
 
 .content-section {
   margin-bottom: 3rem;
   padding: 2rem;
+}
+
+.content-section p {
+  color: #E0E0E0;
 }
 
 .description-buttons {
@@ -271,8 +275,8 @@ body {
   right: 2rem;
   width: 40px;
   height: 40px;
-  background-color: #D2C1B6;
-  color: #1B3C53;
+  background-color: #1B3C53;
+  color: #A8C5E8;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -395,7 +399,7 @@ body {
 
 .experience-description {
   margin: 0 0 0.8rem 0;
-  color: #E8E6E3;
+  color: #E0E0E0;
   line-height: 1.6;
   text-align: left;
   font-size: 0.85rem;
@@ -511,7 +515,7 @@ body {
 
 .project-description {
   font-size: 0.9rem;
-  color: #E8E6E3;
+  color: #E0E0E0;
   line-height: 1.5;
   margin: 0 0 1rem 0;
   flex: 1;
@@ -531,4 +535,17 @@ body {
   border-radius: 15px;
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+.footer-section {
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 2rem;
+}
+
+.footer-text {
+  color: #A8C5E8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
 }

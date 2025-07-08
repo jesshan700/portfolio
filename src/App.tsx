@@ -43,7 +43,7 @@ function App() {
                   <li><a href="#experience" className="toc-link">EXPERIENCE</a></li>
                   <li><a href="#projects" className="toc-link">PROJECTS</a></li>
                   <li><a 
-                    href="https://drive.google.com/file/d/1J2vWe5rMy8PFLNOBGXd27rJ1cJdpkbNa/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1wVS1j-ZLSoUIuAhZxRnWZu6XkTc2K9s0/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="toc-link"
@@ -75,14 +75,14 @@ function App() {
             in Information Science, Systems, and Technology and a concentration in 
             Interactive Technologies. I’m passionate about building software that’s 
             both thoughtful in design and strong in performance — whether that’s through
-             user-focused web interfaces, backend systems, databases, or AI applications.
+              <strong> user-focused web interfaces</strong>, backend systems, databases, or AI applications.
             <br /><br />
-            I’ve gained experience across various environments, from big tech at Amazon to 
-            fintech at SWIFT, and I enjoy working on products that require both creativity 
+            I’ve gained experience across various environments, from big tech at <strong>Amazon</strong> to 
+            fintech at <strong>SWIFT</strong>, and I enjoy working on products that require both creativity 
             and technical rigor.
             <br /><br />
             Outside of work, I love painting with watercolor, playing volleyball, and trying 
-            out new recipes. I'm currently seeking a full-time software engineering role where I 
+            out new recipes. I'm currently seeking a <strong>full-time software engineering</strong> role where I 
             can keep learning, contribute to impactful products, and grow across the full stack
              - from backend to frontend to AI.
             </p>
@@ -98,6 +98,11 @@ function App() {
           <div id="projects" className="content-section">
             <div className="section-header">/ PROJECTS ----------</div>
             <Projects />
+          </div>
+
+          {/* Footer */}
+          <div className="footer-section">
+            <p className="footer-text">built and designed by jessica han</p>
           </div>
         </div>
       </div>

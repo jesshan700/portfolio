@@ -1,14 +1,10 @@
 import React from 'react';
-import { ReactComponent as AmazonLogo } from './images/amazon.svg';
-import { ReactComponent as SwiftLogo } from './images/swiftImage.svg';
-import { ReactComponent as AlesigLogo } from './images/alesig.svg';
 
 interface ExperienceItem {
   company: string;
   role: string;
   period: string;
   description: string;
-  image: React.ReactElement;
   link: string;
   highlights: string[];
 }
@@ -16,56 +12,69 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     company: 'Amazon',
-    role: 'Amazon Intern',
-    period: 'Software Development, Summer 2024',
+    role: 'Software Development Engineer Intern',
+    period: 'MAY 2024 - AUG 2024',
     description: 'Subscribe & Save Customer Experience Team; Redesigned system architecture for Subscribe and Save Webpage, enabling dynamic widget placement to improve customer experience.',
-    image: <AmazonLogo />,
     link: 'https://www.amazon.com/fmc/everyday-essentials-sns',
-    highlights: ['Subscribe and Save Webpage', 'AWS DynamoDB', 'query tools', 'data analysis tools']
+    highlights: ['AWS','Java','DynamoDB', 'Internal query tools', 'Internal data analysis']
+  },
+  {
+    company: 'Cornell Digital Tech & Innovation Project Team',
+    role: 'Full Stack Developer',
+    period: 'FEB 2023 - AUG 2024',
+    description: 'Collaborated with designers, developers, and PMs on the CUApts sub-team to design and build a web application for Cornell students to search for off-campus housing; customized and optimized review card components from Figma designs, resolved query issues, and implemented a search box to enhance user experience.',
+    link: 'https://www.cornelldti.org/',
+    highlights: ['Typescript', 'JavaScript', 'React.js', 'Figma', 'Google Firebase']
+  },
+  {
+    company: 'Cornell University',
+    role: 'Teaching Assistant for INFO 2300',
+    period: 'JAN 2024 - MAY 2024',
+    description: 'Teaching Assistant for a server-side web development course covering HTTP handling, dynamic rendering, SQL database integration, and secure session management using PHP; provided technical support during weekly office hours and evaluated project-based assignments.',
+    link: 'https://classes.cornell.edu/browse/roster/SP24/class/INFO/2300',
+    highlights: ['PHP', 'SQL', 'HTML', 'CSS', 'JavaScript']
   },
   {
     company: 'Swift',
-    role: 'Swift Intern',
-    period: 'DevOps, Summer 2023',
+    role: 'DevOps Intern',
+    period: 'JUN 2023 - AUG 2023',
     description: 'Collaboration and Management Squad; retrieved Bitbucket respository and project branch permissions, and pull request setting by querying BitbucketAPI and used Groovy JSON objects to parse information.',
-    image: <SwiftLogo />,
     link: 'https://www.swift.com/',
-    highlights: ['BitbucketAPI', 'Groovy JSON']
+    highlights: ['Python','BitbucketAPI', 'Groovy']
   },
   {
     company: 'Alesig',
-    role: 'Alesig Intern',
-    period: 'Interactive Technologies, Summer 2022',
+    role: 'Information Technology Intern',
+    period: 'JUN 2022 - AUG 2022',
     description: 'Worked primarily with AWS during internship at Alesig. Migrated website from on-prem server to EC2 instances.',
-    image: <AlesigLogo />,
     link: 'https://alesig.com/',
-    highlights: []
+    highlights: ['AWS', 'EC2']
   }
 ];
 
 const Experience: React.FC = () => {
   return (
     <div id="experience" className="section">
-      <h2>Experience</h2>
       {experiences.map((exp, index) => (
-        <div key={index} className="main-projects">
-          <a href={exp.link} target="_blank" rel="noopener noreferrer" className="image-link">
-            {exp.image}
-          </a>
-          <div className="project-descript">
-            <a href={exp.link} target="_blank" rel="noopener noreferrer" className={`${exp.company.toLowerCase()}-sub`}>
-              {exp.role}
-            </a>
-            <br />
-            <p className="project-date">{exp.period}</p>
-            <p className="project-summary">
+        <div key={index} className="experience-item">
+          <div className="experience-date">{exp.period}</div>
+          <div className="experience-content">
+            <div className="experience-header">
+              <span className="company-name">{exp.company}</span>
+              <span className="role-title"><i>{exp.role}</i></span>
+            </div>
+            <p className="experience-description">
               {exp.description}
-              {exp.highlights.map((highlight, i) => (
-                <span key={i} style={{ color: exp.company === 'Amazon' ? '#ffb35b' : exp.company === 'Swift' ? '#98ded9' : '#a3ccfc' }}>
-                  {' '}{highlight}
-                </span>
-              ))}
             </p>
+            {exp.highlights.length > 0 && (
+              <div className="highlights-container">
+                {exp.highlights.map((highlight, i) => (
+                  <span key={i} className="highlight-button">
+                    {highlight}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))}

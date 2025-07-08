@@ -24,7 +24,6 @@ const projects: ProjectItem[] = [
 const Projects: React.FC = () => {
   return (
     <div id="projects" className="section">
-      <h2>Projects</h2>
       {projects.map((project, index) => (
         <div key={index} className="main-projects">
           <a href={project.link} target="_blank" rel="noopener noreferrer" className="image-link">

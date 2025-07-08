@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import Navbar from './components/Navbar';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Footer from './components/Footer';
 import jessicaImage from './components/images/jessica.jpeg';
 import './App.css';
 
@@ -25,53 +23,84 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
       <a href="#top" className="to-top" style={{ display: showToTop ? 'block' : 'none' }}>
         <FontAwesomeIcon icon={faArrowUp} />
       </a>
       
-      {/* Hero Section - Merged with About */}
-      <div className="main-description" id="top">
-        <div className="hero-content">
-          <div className="hero-text">
-            <h1>Hi, I'm Jessica</h1>
-            <p>
-              I was previously <i>@Amazon</i> and currently open to entry level
-              positions!
-              <br />
-              <br />
-              In my free time, you can find me creating my own art, mainly with
-              watercolor, playing volleyball on the Arts Quad, or searching around
-              the web for easy recipes to try.
-              <br />
-              <br />
-              See what I've been up to!
-              <a href="#experience">
-                <FontAwesomeIcon icon={faArrowDown} />
-              </a>
-            </p>
-            <div className="description-buttons">
-              <a href="#experience" className="btn">Experience</a>
-              <a href="#projects" className="btn">Projects</a>
+      <div className="split-layout">
+        {/* Left Section - Static About/Profile */}
+        <div className="left-section">
+          <div className="profile-content">
+            <div className="profile-text">
+              <h1>Hi, I'm Jessica</h1>
+              <p>
+                I was previously <i>@Amazon</i> and currently open to entry level
+                positions!
+              </p>
+              <div className="table-of-contents">
+                <ul>
+                  <li><a href="#intro" className="toc-link">INTRODUCTION</a></li>
+                  <li><a href="#experience" className="toc-link">EXPERIENCE</a></li>
+                  <li><a href="#projects" className="toc-link">PROJECTS</a></li>
+                  <li><a 
+                    href="https://drive.google.com/file/d/1J2vWe5rMy8PFLNOBGXd27rJ1cJdpkbNa/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="toc-link"
+                  >VIEW RESUME</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className="hero-image">
-            <img src={jessicaImage} alt="jessica-picture" />
+          <div className="social-links">
+            <a href="https://github.com/jesshan700" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/jessica-han-78b4b3220/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:jesshan70@gmail.com">
+              <i className="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        {/* Right Section - Scrollable Content */}
+        <div className="right-section">
+          {/* Introduction */}
+          <div id="intro" className="intro-section">
+            <div className="section-header">/ INTRODUCTION ------------</div>
+            <p>
+            I’m Jessica, a recent graduate from Cornell University with a degree 
+            in Information Science, Systems, and Technology and a concentration in 
+            Interactive Technologies. I’m passionate about building software that’s 
+            both thoughtful in design and strong in performance — whether that’s through
+             user-focused web interfaces, backend systems, databases, or AI applications.
+            <br /><br />
+            I’ve gained experience across various environments, from big tech at Amazon to 
+            fintech at SWIFT, and I enjoy working on products that require both creativity 
+            and technical rigor.
+            <br /><br />
+            Outside of work, I love painting with watercolor, playing volleyball, and trying 
+            out new recipes. I'm currently seeking a full-time software engineering role where I 
+            can keep learning, contribute to impactful products, and grow across the full stack
+             - from backend to frontend to AI.
+            </p>
+          </div>
+
+          {/* Experience Section */}
+          <div id="experience" className="content-section">
+            <div className="section-header">/ EXPERIENCE ----------</div>
+            <Experience />
+          </div>
+
+          {/* Projects Section */}
+          <div id="projects" className="content-section">
+            <div className="section-header">/ PROJECTS ----------</div>
+            <Projects />
           </div>
         </div>
       </div>
-
-      {/* Experience Section */}
-      <div id="experience" className="section">
-        <Experience />
-      </div>
-
-      {/* Projects Section */}
-      <div id="projects" className="section">
-        <Projects />
-      </div>
-
-      <Footer />
     </div>
   );
 }

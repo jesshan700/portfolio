@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8115e9ea.css",
-    "main.js": "/portfolio/static/js/main.26ed73b0.js",
-    "static/js/453.ad7768ec.chunk.js": "/portfolio/static/js/453.ad7768ec.chunk.js",
-    "static/media/jessica.jpeg": "/portfolio/static/media/jessica.c146de1ff2deeaf6dbab.jpeg",
-    "static/media/reVent.svg": "/portfolio/static/media/reVent.3d5cedf2bf9f03a4b320a171381dda00.svg",
-    "static/media/mbti.svg": "/portfolio/static/media/mbti.d30c15bb4758a6a04d3c824773cb47ad.svg",
-    "index.html": "/portfolio/index.html",
-    "main.8115e9ea.css.map": "/portfolio/static/css/main.8115e9ea.css.map",
-    "main.26ed73b0.js.map": "/portfolio/static/js/main.26ed73b0.js.map",
-    "453.ad7768ec.chunk.js.map": "/portfolio/static/js/453.ad7768ec.chunk.js.map"
+    "main.css": "/static/css/main.8115e9ea.css",
+    "main.js": "/static/js/main.eed86fc4.js",
+    "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
+    "static/media/jessica.jpeg": "/static/media/jessica.c146de1ff2deeaf6dbab.jpeg",
+    "static/media/reVent.svg": "/static/media/reVent.3d5cedf2bf9f03a4b320a171381dda00.svg",
+    "static/media/mbti.svg": "/static/media/mbti.d30c15bb4758a6a04d3c824773cb47ad.svg",
+    "index.html": "/index.html",
+    "main.8115e9ea.css.map": "/static/css/main.8115e9ea.css.map",
+    "main.eed86fc4.js.map": "/static/js/main.eed86fc4.js.map",
+    "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8115e9ea.css",
-    "static/js/main.26ed73b0.js"
+    "static/js/main.eed86fc4.js"
   ]
 }
